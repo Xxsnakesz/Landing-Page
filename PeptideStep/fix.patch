@@ -1,0 +1,44 @@
+--- src/components/LandingPage.tsx
++++ src/components/LandingPage.tsx
+@@ -88,8 +88,27 @@
+ }
+ 
+ const steps = [
+-  {<DosingExample />         <li className="flex items-start gap-2"><span className="text-red-600 font-bold">•</span> JANGAN mencampur (reconstitute) dua kali.</li>
+-            </ul>
++  {
++    id: 1,
++    title: "Reconstitution (Melarutkan)",
++    icon: <Syringe className="w-6 h-6 text-indigo-500" />,
++    content: (
++      <div className="space-y-4">
++        <p className="text-gray-600 font-medium">
++          Peptide dikirim dalam bentuk bubuk agar tetap stabil. Sebelum digunakan, Anda perlu mencampurnya dengan Bacteriostatic Water (BAC water / Air Bakteriostatik).
++        </p>
++        <div className="bg-indigo-50 p-4 rounded-xl flex items-start gap-3 border border-indigo-100 shadow-sm">
++          <Droplet className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0" />
++          <p className="text-sm text-indigo-900 leading-relaxed">
++            <strong>Contoh:</strong> Suntikkan sejumlah BAC water pilihan Anda (biasanya 1mL / 100 unit / 1cc) ke dalam botol (vial) peptide.
++          </p>
++        </div>
++        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
++          <div className="bg-green-50 rounded-xl p-4 border border-green-100 shadow-sm">
++            <h4 className="font-semibold text-green-800 flex items-center gap-2 mb-3">
++              <CheckCircle2 className="w-5 h-5" /> Lakukan
++            </h4>
++            <ul className="text-sm text-green-900 space-y-2">
++              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-green-600 mt-0.5" /> Gulingkan atau putar perlahan vial di tangan.</li>
++              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-green-600 mt-0.5" /> Tunggu sampai larut sepenuhnya sebelum dipakai.</li>
++            </ul>
++          </div>
++          <div className="bg-red-50 rounded-xl p-4 border border-red-100 shadow-sm">
++            <h4 className="font-semibold text-red-800 flex items-center gap-2 mb-3">
++              <XCircle className="w-5 h-5" /> Jangan
++            </h4>
++            <ul className="text-sm text-red-900 space-y-2">
++              <li className="flex items-start gap-2"><span className="text-red-600 font-bold">•</span> JANGAN mengocok dengan keras.</li>
++              <li className="flex items-start gap-2"><span className="text-red-600 font-bold">•</span> JANGAN mencampur (reconstitute) dua kali.</li>
++            </ul>
+           </div>
+         </div>
+       </div>
